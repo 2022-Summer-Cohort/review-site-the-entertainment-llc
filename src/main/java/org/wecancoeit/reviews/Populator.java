@@ -52,14 +52,48 @@ public class Populator implements CommandLineRunner {
 
         Hashtag globalCuisine = new Hashtag("#GlobalCuisine");
         hashtagRepo.save(globalCuisine);
-        Destination minnisotaStateFair = new Destination("Minnisota State Fair", "1265 Snelling Ave N, St Paul, MN 55108","Only place that’s not Las Vegas where you can get married, ride a roller coaster,  and win a hot dog eating contest on the same day!", 4.0,fairs,globalCuisine);
+        Destination minnisotaStateFair = new Destination("Minnesota State Fair", "1265 Snelling Ave N, St Paul, MN 55108","Only place that’s not Las Vegas where you can get married, ride a roller coaster,  and win a hot dog eating contest on the same day!", 4.0,fairs,globalCuisine);
         destinationRepo.save(minnisotaStateFair);
 
         Hashtag entertaining = new Hashtag("#Entertaining");
         hashtagRepo.save(entertaining);
         Category circuses = new Category("Circuses");
         categoryRepo.save(circuses);
-        Destination gardenBrothers = new Destination("Garden Brothers Circus", "Myakka City, FL 34251","I liked the horse and elephant shows the best, but the motorcycle act was incredible, and the acrobats were all great", 1.5,circuses,globalCuisine);
+        Destination gardenBrothers = new Destination("Garden Brothers Circus", "Myakka City, FL 34251","I liked the horse and elephant shows the best, but the motorcycle act was incredible, and the acrobats were all great", 1.5,circuses,thriller);
+        destinationRepo.save(gardenBrothers);
+
+        Hashtag familyFriendly = new Hashtag("#familyfriendly");
+        hashtagRepo.save(familyFriendly);
+        Category safariParks = new Category("Safari Parks");
+        categoryRepo.save(safariParks);
+        Destination theWilds = new Destination("The Wilds", "14000 International Rd, Cumberland, OH 43732","Exceeds all expectations. Must visit, out of this world rare and unforgettable experience", 4.8,safariParks,familyFriendly);
+        destinationRepo.save(theWilds);
+
+        Hashtag budgetFriendly = new Hashtag("#budgetfriendly");
+        hashtagRepo.save(budgetFriendly);
+        Destination safariWest = new Destination("Safari West", "3115 Porter Creek Rd, Santa Rosa, CA 95404","Great experience! Definitely worth it", 4.5,safariParks,budgetFriendly);
+        destinationRepo.save(safariWest);
+
+        Hashtag animals = new Hashtag("#Animals");
+        hashtagRepo.save(animals);
+        Category zoo = new Category("Zoo");
+        categoryRepo.save(zoo);
+        Destination columbusZoo = new Destination("Columbus Zoo", "4850 W Powell Rd, Powell, OH 43065","The bears gave me a weird look, but I’ll still come back!", 5.0,zoo,animals);
+        destinationRepo.save(columbusZoo);
+
+        Hashtag beautiful = new Hashtag("#beautiful");
+        hashtagRepo.save(beautiful);
+        Destination clevelandMetroParksZoo = new Destination("Cleveland Metro Parks Zoo", "3900 Wildlife Way, Cleveland, OH 44109","I want to come back year after year!", 4.0,zoo,beautiful);
+        destinationRepo.save(clevelandMetroParksZoo);
+
+
+
+
+
+
+
+
+
 
 
 
