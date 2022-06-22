@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="css/suggestionslayout.css">
     <link rel="stylesheet" href="css/suggestionsstyle.css">
 </head>
+
 <body>
     <header>
         <a href="/src/main/resources/static/category.html" class="linked-logo">
@@ -16,12 +18,31 @@
         </a>
         <nav class="main-nav">
             <ul>
-                <li><a href="/src/main/resources/static/category.html#destination-catergories">Destination Categories</a></li>
+                <li><a href="/src/main/resources/static/category.html#destination-catergories">Destination
+                        Categories</a></li>
                 <li><a href="/src/main/resources/static/hashtag.html">Hashtags</a></li>
             </ul>
         </nav>
     </header>
-
+    <h3 class="us">Make A Destination Suggestion</h3>
+    <section class="main">
+        <img src="/src/main/resources/static/images/pin.png" alt="" class="pin">
+        <form action="" class="form">
+            <div class="input-group">
+                <label>Name of suggested destination:</label>
+                <input type="text">
+                <label>Address:</label>
+                <input type="text">
+                <label>Website/URL:</label>
+                <input type="url">
+                <label>Breif description of why you suggested this destination:</label>
+                <input type="text">
+            </div>
+            <div class="input-group">
+                <button type="submit" class="button">Submit</button>
+            </div>
+        </form>
+    </section>
     <footer>
         <div class="extra">
             <a href="ourteam.html">Meet Our Team</a>
@@ -30,4 +51,5 @@
         </div>
     </footer>
 </body>
+
 </html>

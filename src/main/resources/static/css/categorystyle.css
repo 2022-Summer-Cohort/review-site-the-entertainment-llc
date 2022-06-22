@@ -100,8 +100,7 @@ footer p {
 }
 .categories a {
     text-decoration: none;
-    /* color: rgb(228, 106, 7); */
-    color: goldenrod
+    color: goldenrod;
 }
 .categories a:hover {
    color: white;
