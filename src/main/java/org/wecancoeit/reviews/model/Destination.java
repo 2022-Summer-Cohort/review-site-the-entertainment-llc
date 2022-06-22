@@ -1,6 +1,7 @@
 package org.wecancoeit.reviews.model;
 
 import javax.persistence.*;
+import java.util.Arrays;
 import java.util.Collection;
 
 @Entity
@@ -20,14 +21,16 @@ public class Destination {
     @ManyToMany
     private Collection<Hashtag> hashtags;
 
-    public Destination(long id, String title, String address, String review, double rating, Category category, Collection<Hashtag> hashtags) {
-        this.id = id;
+    public Destination(String title, String address, String review, double rating, Category category, Hashtag...hashtags) {
         this.title = title;
         this.address = address;
         this.review = review;
         this.rating = rating;
         this.category = category;
-        this.hashtags = hashtags;
+        this.hashtags = Arrays.asList(hashtags);
+    }
+
+    public Destination(){
     }
 
     public long getId() {
@@ -56,5 +59,9 @@ public class Destination {
 
     public Collection<Hashtag> getHashtags() {
         return hashtags;
+    }
+
+    public void addHashtag(Hashtag hashtag){
+        hashtags.add(hashtag);
     }
 }
