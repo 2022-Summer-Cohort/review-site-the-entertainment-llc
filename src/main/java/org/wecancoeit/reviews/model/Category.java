@@ -2,15 +2,23 @@ package org.wecancoeit.reviews.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import java.util.Collection;
+
 @Entity
 public class Category {
+    @Id
     @GeneratedValue
     private long id;
-    private long catName;
+    private String name;
 
-    public Category(long id, long catName) {
-        this.id = id;
-        this.catName = catName;
+    @OneToMany(mappedBy = "category")
+    private Collection<Destination> destinations;
+
+    public Category(String name) {
+
+        this.name = name;
     }
 
     public Category(){
@@ -20,8 +28,11 @@ public class Category {
         return id;
     }
 
-    public long getCatName() {
-        return catName;
+    public String getName() {
+        return name;
     }
 
+    public Collection<Destination> getDestinations() {
+        return destinations;
+    }
 }
