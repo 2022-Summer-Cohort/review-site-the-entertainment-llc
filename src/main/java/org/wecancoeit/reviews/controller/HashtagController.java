@@ -16,9 +16,9 @@ public class HashtagController {
         this.hashtagRepo = hashtagRepo;
     }
 
-    @RequestMapping("/{id}")
+    @RequestMapping("")
     public String showHashtag(Model model, @PathVariable Long id){
-        model.addAttribute("hashtag", hashtagRepo.findById(id).get());
+        model.addAttribute("hashtag", hashtagRepo.findAll());
         return "hashtag";
     }
 }
