@@ -6,14 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AmusedUS</title>
-    <link rel="stylesheet" href="css/categorylayout.css">
-    <link rel="stylesheet" href="css/categorystyle.css">
+    <link rel="stylesheet" href="/css/categorylayout.css">
+    <link rel="stylesheet" href="/css/categorystyle.css">
 </head>
 
 <body>
     <header>
-        <a href="/src/main/resources/static/category.html" class="linked-logo">
-            <img src="images/FWlogo.png" alt="ferris wheel logo" class="logo">
+        <a href="/categories" class="linked-logo">
+            <img src="/images/FWlogo.png" alt="ferris wheel logo" class="logo">
             <div class="logo-text"><span>am</span><span class="logo-us-text">US</span>ed</div>
         </a>
         <nav class="main-nav">
@@ -34,8 +34,8 @@
         <h3 id="destination-catergories">Destination Categories</h3>
         <div class="categories">
             <ul>
-                <li th:each="anything:${categories}">
-                    <a th:href="'categories/' + ${anything.id}" th:text="${anything.name}">category</a>
+                <li th:each="thing: ${categories}">
+                    <a th:text="${thing.name}" th:href="'/categories/' + ${thing.id}">category</a>
                 </li>
             </ul>
         </div>
