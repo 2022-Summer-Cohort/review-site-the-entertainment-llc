@@ -1,0 +1,21 @@
+/* MAIN SECTION */
+.main {
+    display: flex;
+}
+/* CATEGORIES SECTION */
+.categories {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    row-gap: 5rem;
+    padding-top: 1rem;
+    padding-bottom: 5rem;
+}
+.category-options h3 {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 3rem;
+    color: goldenrod;
+    padding-bottom: 2rem;
+}

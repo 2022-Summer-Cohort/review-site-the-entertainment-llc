@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.wecancoeit.reviews.repos.CategoryRepository;
 
 @Controller
-//@RequestMapping("/category")
 public class CategoryController {
 
     private CategoryRepository categoryRepo;
@@ -19,7 +18,7 @@ public class CategoryController {
     @RequestMapping("/")
     public String showAllCategories(Model model){
         model.addAttribute("categories", categoryRepo.findAll());
-        return "categories";
+        return "test";
     }
     @RequestMapping("categories/{id}")
     public String showCategory(Model model, @PathVariable Long id){
