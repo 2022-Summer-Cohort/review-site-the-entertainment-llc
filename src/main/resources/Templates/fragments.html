@@ -1,10 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>fragments</title>
 </head>
 <body>
-
+<header th:fragment="header">
+    <a href="/categories" class="linked-logo">
+        <img src="/images/FWlogo.png" alt="ferris wheel logo" class="logo">
+        <div class="logo-text"><span>am</span><span class="logo-us-text">US</span>ed</div>
+    </a>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="/categories">Destination
+                Categories</a></li>
+            <li><a href="/hashtag">Hashtags</a></li>
+        </ul>
+    </nav>
+</header>
+<footer th:fragment="footer">
+    <div class="extra">
+        <a href="ourteam.html">Meet Our Team</a>
+        <p>All Rights Reserved 2022</p>
+        <a href="suggestions.html">Suggestion Box</a>
+    </div>
+</footer>
 </body>
 </html>
