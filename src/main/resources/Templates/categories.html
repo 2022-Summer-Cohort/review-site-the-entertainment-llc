@@ -23,7 +23,7 @@
         <div class="categories">
             <ul>
                 <li th:each="thing: ${categories}">
-                    <a th:text="${thing.name}" th:href="'/categories/' + ${thing.id}">category</a>
+                    <a th:href="'/categories/' + ${thing.id}"><img th:src="${thing.imgUrl}"><h2 th:text="${thing.name}">category</h2></a>
                 </li>
             </ul>
         </div>

@@ -8,27 +8,27 @@ import org.wecancoeit.reviews.repos.DestinationRepository;
 import org.wecancoeit.reviews.repos.HashtagRepository;
 
 @Controller
-@RequestMapping("/hashtag")
+@RequestMapping("/hashtags")
 public class HashtagController {
     private HashtagRepository hashtagRepo;
     private DestinationRepository destinationRepo;
 
-    public HashtagController(HashtagRepository hashtagRepo, DestinationRepository destinationRepo ) {
+    public HashtagController(HashtagRepository hashtagRepo, DestinationRepository destinationRepo) {
         this.hashtagRepo = hashtagRepo;
         this.destinationRepo = destinationRepo;
     }
 
+    @RequestMapping("")
+    public String showAllHashtag(Model model) {
+        model.addAttribute("hashtag", hashtagRepo.findAll());
+        return "hashtag";
+    }
+
     @RequestMapping("/{id}")
-    public String showHashTagDestinations (Model model, @PathVariable Long id){
-        model.addAttribute("hashtagdestination", destinationRepo.findById(id).get());
+    public String showHashTagDestinations(Model model, @PathVariable Long id) {
+        model.addAttribute("hashtagdestination", hashtagRepo.findById(id).get());
         return "hashtagdestination";
     }
 
-
-        @RequestMapping("")
-        public String showHashtag (Model model, @PathVariable Long id){
-            model.addAttribute("hashtag", hashtagRepo.findAll());
-            return "hashtag";
-        }
-    }
+}
 

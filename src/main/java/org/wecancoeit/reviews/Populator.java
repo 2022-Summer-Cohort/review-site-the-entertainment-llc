@@ -26,7 +26,7 @@ public class Populator implements CommandLineRunner {
 
         Hashtag fun = new Hashtag("#fun");
         hashtagRepo.save(fun);
-        Category coaster = new Category("Roller Coaster");
+        Category coaster = new Category("Roller Coaster", "/images/small/BigSplashSM.jpg");
         categoryRepo.save(coaster);
         Destination cedarPoint = new Destination("Cedar Point", "Cedar Point DrSandusky, OH 44870","This place is absolutely wild", 4.5,coaster,fun);
         destinationRepo.save(cedarPoint);
@@ -36,7 +36,7 @@ public class Populator implements CommandLineRunner {
         Destination sixFlags = new Destination("Six Flags", "13710 Central Ave, Bowie, MD 20721","Great roller coasters for kids and adults", 4.5,coaster,thriller);
         destinationRepo.save(sixFlags);
 
-        Category waterPark = new Category("Water Parks");
+        Category waterPark = new Category("Water Parks", "/images/small/BigSplashSM.jpg");
         categoryRepo.save(waterPark);
         Destination zoombezi = new Destination("Zoombezi Bay", "4850 Powell Rd, Powell, OH 43065","Great place for family and children outing.", 4.5,waterPark,fun);
         destinationRepo.save(zoombezi);
@@ -45,7 +45,7 @@ public class Populator implements CommandLineRunner {
 
         Hashtag competitions = new Hashtag("#Competitive");
         hashtagRepo.save(competitions);
-        Category fairs = new Category("Fairs");
+        Category fairs = new Category("Fairs", "/images/small/BigSplashSM.jpg");
         categoryRepo.save(fairs);
         Destination ohioStateFair = new Destination("Ohio State Fair", "717 E 17th Ave, Columbus, OH 43211","It’s no Pawnee Harvest Festival, but it’ll do!", 3.0,fairs,competitions);
         destinationRepo.save(ohioStateFair);
@@ -57,14 +57,14 @@ public class Populator implements CommandLineRunner {
 
         Hashtag entertaining = new Hashtag("#Entertaining");
         hashtagRepo.save(entertaining);
-        Category circuses = new Category("Circuses");
+        Category circuses = new Category("Circuses", "/images/small/BigSplashSM.jpg");
         categoryRepo.save(circuses);
         Destination gardenBrothers = new Destination("Garden Brothers Circus", "Myakka City, FL 34251","I liked the horse and elephant shows the best, but the motorcycle act was incredible, and the acrobats were all great", 1.5,circuses,thriller);
         destinationRepo.save(gardenBrothers);
 
         Hashtag familyFriendly = new Hashtag("#familyfriendly");
         hashtagRepo.save(familyFriendly);
-        Category safariParks = new Category("Safari Parks");
+        Category safariParks = new Category("Safari Parks", "/images/small/BigSplashSM.jpg");
         categoryRepo.save(safariParks);
         Destination theWilds = new Destination("The Wilds", "14000 International Rd, Cumberland, OH 43732","Exceeds all expectations. Must visit, out of this world rare and unforgettable experience", 4.8,safariParks,familyFriendly);
         destinationRepo.save(theWilds);
@@ -76,7 +76,7 @@ public class Populator implements CommandLineRunner {
 
         Hashtag animals = new Hashtag("#Animals");
         hashtagRepo.save(animals);
-        Category zoo = new Category("Zoo");
+        Category zoo = new Category("Zoo", "/images/small/BigSplashSM.jpg");
         categoryRepo.save(zoo);
         Destination columbusZoo = new Destination("Columbus Zoo", "4850 W Powell Rd, Powell, OH 43065","The bears gave me a weird look, but I’ll still come back!", 5.0,zoo,animals);
         destinationRepo.save(columbusZoo);

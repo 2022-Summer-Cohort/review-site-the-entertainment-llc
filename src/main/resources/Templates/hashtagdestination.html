@@ -12,11 +12,11 @@
 
 <body>
 <div th:replace="fragments.html :: header"></div>
-    <h1>#Hashtags</h1>
+    <h1 th:text="${hashtagdestination.hashtagDescription}">#Hashtags</h1>
     <div class="main">
             <ul>
-                <li th:each="thing: ${hashtagdestination}">
-                    <p th:text="${thing.hashtagDescription}">asdf</p>
+                <li th:each="thing: ${hashtagdestination.destinations}">
+                    <p th:text="${thing.title}">asdf</p>
                 </li>
             </ul>
     </div>
