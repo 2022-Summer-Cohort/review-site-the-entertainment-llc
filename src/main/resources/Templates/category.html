@@ -11,19 +11,7 @@
 </head>
 
 <body>
-    <header>
-        <a href="/categories" class="linked-logo">
-            <img src="images/FWlogo.png" alt="ferris wheel logo" class="logo">
-            <div class="logo-text"><span>am</span><span class="logo-us-text">US</span>ed</div>
-        </a>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="/src/main/resources/static/category.html#destination-categories">Destination
-                        Categories</a></li>
-                <li><a href="/src/main/resources/static/hashtag.html">Hashtags</a></li>
-            </ul>
-        </nav>
-    </header>
+<div th:replace="fragments.html :: header"></div>
     <div class="pic-and-info">
         <img src="/src/main/resources/static/images/large/ZoombeziBayLG.jpg" alt="" class="category-pic">
         <p>info about the category</p>
@@ -44,18 +32,12 @@
 
         <ul>
             <li th:each="destination: ${category.destinations}">
-                <a th:text="${destination.title}" th:href="${}"
+                <a th:text="${destination.title}" th:href="'/destination/' + ${destination.id}">destination</a>
             </li>
         </ul>
     </div>
 
-    <footer>
-        <div class="extra">
-            <a href="ourteam.html">Meet Our Team</a>
-            <p>All Rights Reserved 2022</p>
-            <a href="suggestions.html">Suggestion Box</a>
-        </div>
-    </footer>
+<div th:replace="fragments.html :: footer"></div>
 </body>
 
 </html>

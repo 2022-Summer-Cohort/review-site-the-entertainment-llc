@@ -6,55 +6,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Destination</title>
-    <link rel="stylesheet" href="css/destinationlayout.css">
-    <link rel="stylesheet" href="css/destinationstyle.css">
+    <link rel="stylesheet" href="/css/destinationlayout.css">
+    <link rel="stylesheet" href="/css/destinationstyle.css">
 </head>
 
 <body>
-    <header>
-        <a href="/src/main/resources/static/category.html" class="linked-logo">
-            <img src="images/FWlogo.png" alt="ferris wheel logo" class="logo">
-            <div class="logo-text"><span>am</span><span class="logo-us-text">US</span>ed</div>
-        </a>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="/src/main/resources/static/category.html#destination-categories">Destination Categories</a></li>
-                <li><a href="/src/main/resources/static/hashtag.html">Hashtags</a></li>
-            </ul>
-        </nav>
-    </header>
+<div th:replace="fragments.html :: header"></div>
 
     <div class="main">
+<!--        <section class="description">-->
+<!--            <section class="title">-->
+<!--                <p>title of the destination</p>-->
+<!--            </section>-->
+<!--            <section class="address">-->
+<!--                <p>address of the destination</p>-->
+<!--            </section>-->
+<!--            <section class="contact">-->
+<!--                <p>123-123-1234</p>-->
+<!--            </section>-->
+<!--            <section class="ticket">-->
+<!--                <p>cost of ticket</p>-->
+<!--            </section>-->
+<!--        </section>-->
+<!--        <section class=rating>-->
+<!--            <p>average rating</p>-->
+<!--        </section>-->
+<!--        <section class="reviews">-->
+<!--            <p>this is where the reviews will be</p>-->
+<!--            <p>this is where the rating is</p>-->
+<!--        </section>-->
+
         <section class="description">
             <section class="title">
-                <p>title of the destination</p>
+                <p th:text="${destination.title}">asdf</p>
             </section>
             <section class="address">
-                <p>address of the destination</p>
-            </section>
-            <section class="contact">
-                <p>123-123-1234</p>
-            </section>
-            <section class="ticket">
-                <p>cost of ticket</p>
+                <p th:text="${destination.address}">asdf</p>
             </section>
         </section>
-        <section class=rating>
-            <p>average rating</p>
+        <section class="rating">
+            <section class="rating">
+                <p th:text="${destination.rating}">asdf</p>
+            </section>
         </section>
         <section class="reviews">
-            <p>this is where the reviews will be</p>
-            <p>this is where the rating is</p>
+            <p th:text="${destination.review}">asdf</p>
         </section>
+        <section class = "hashtag">
+            <ul>
+                <li th:each="thing: ${destination.hashtags}">
+                    <a th:text="${thing.hashtagDescription}" th:href="'/hashtag/' + ${thing.id}">asdf</a>
+                </li>
+            </ul>
+        </section>
+
+
+
+
     </div>
 
-    <footer>
-        <div class="extra">
-            <a href="ourteam.html">Meet Our Team</a>
-            <p>All Rights Reserved 2022</p>
-            <a href="suggestions.html">Suggestion Box</a>
-        </div>
-    </footer>
+<div th:replace="fragments.html :: footer"></div>
 </body>
 
 </html>
