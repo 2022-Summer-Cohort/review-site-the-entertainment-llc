@@ -14,6 +14,7 @@ public class Destination {
     private String address;
     private String review;
     private double rating;
+    private String imgUrl;
 
 
     @ManyToOne
@@ -21,13 +22,15 @@ public class Destination {
     @ManyToMany
     private Collection<Hashtag> hashtags;
 
-    public Destination(String title, String address, String review, double rating, Category category, Hashtag...hashtags) {
+    public Destination(String title, String address, String review, double rating, Category category, String imgUrl,Hashtag...hashtags) {
         this.title = title;
         this.address = address;
         this.review = review;
         this.rating = rating;
         this.category = category;
         this.hashtags = Arrays.asList(hashtags);
+        this.imgUrl = imgUrl;
+
     }
 
     public Destination(){
@@ -55,6 +58,10 @@ public class Destination {
 
     public Category getCategory() {
         return category;
+    }
+
+    public String getImgUrl() {
+        return imgUrl;
     }
 
     public Collection<Hashtag> getHashtags() {

@@ -32,7 +32,7 @@
 
         <ul>
             <li th:each="destination: ${category.destinations}">
-                <a th:text="${destination.title}" th:href="'/destination/' + ${destination.id}">destination</a>
+                <a th:href="'/destination/' + ${destination.id}"><img th:src="${destination.imgUrl}"><h2 th:text="${destination.title}"></h2></a>
             </li>
         </ul>
     </div>
