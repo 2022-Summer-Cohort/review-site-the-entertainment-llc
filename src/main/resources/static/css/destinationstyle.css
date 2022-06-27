@@ -15,8 +15,9 @@ body {
 
 /* HEADER */
 header {
-    background-color: whitesmoke;
+    background-color: white;
 }
+
 /* SITE LOGO */
 .logo {
     height: 50px;
@@ -40,6 +41,7 @@ header {
     color: rgb(228, 106, 7);
     text-decoration: none;
 }
+
 /* SITE NAVIGATION */
 .main-nav ul {
     display: flex;
@@ -59,6 +61,7 @@ header {
 .main-nav a:hover {
     color: rgb(44, 236, 18);
 }
+
 /* FOOTER */
 footer {
     background-color: white;
@@ -69,15 +72,65 @@ footer a {
     color: goldenrod;
     font-weight: bold;
 }
+
 footer p {
- text-align: center;
- font-size: .75rem;
- font-weight: bold;
- color: black;
+    text-align: center;
+    font-size: .75rem;
+    font-weight: bold;
+    color: black;
 }
+
 .extra {
     display: flex;
     justify-content: space-evenly;
     padding-bottom: .5rem;
     padding-top: .5rem;
+}
+
+/* MAIN */
+.main section h2 {
+    color: goldenrod;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 1rem;
+}
+
+.main section {
+    color: rgb(3, 46, 82);
+    font-weight: bold;
+}
+
+/* ADDRESS */
+.address h4 {
+    box-sizing: content-box;
+    height: fit-content;
+    width: fit-content;
+    color: goldenrod;
+    padding-bottom: 0;
+}
+
+.address p {
+    box-sizing: content-box;
+    height: fit-content;
+    width: fit-content;
+    margin: 0;
+    color: white;
+}
+
+/* WEBSITE */
+.website h4 {
+    box-sizing: content-box;
+    height: fit-content;
+    width: fit-content;
+    color: goldenrod;
+}
+
+.website a {
+    text-decoration: none;
+    color: rgb(3, 46, 82);
+}
+
+.website a:hover {
+    color: white;
 }

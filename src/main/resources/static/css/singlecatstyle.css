@@ -15,7 +15,7 @@ body {
 
 /* HEADER */
 header {
-    background-color: whitesmoke;
+    background-color: white;
 }
 /* SITE LOGO */
 .logo {
@@ -81,3 +81,13 @@ footer p {
     padding-bottom: .5rem;
     padding-top: .5rem;
 }
+/* MAIN */
+.main a {
+  text-decoration: none;
+  font-weight: bold;
+  color: goldenrod;
+  text-align: center;
+}
+.main a:hover {
+    color: white;
+  }

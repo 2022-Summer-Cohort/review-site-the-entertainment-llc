@@ -21,11 +21,12 @@
     <section class="category-options">
         <h3 id="destination-categories">Destination Categories</h3>
         <div class="categories">
-            <ul>
-                <li th:each="thing: ${categories}">
-                    <a th:href="'/categories/' + ${thing.id}"><img th:src="${thing.imgUrl}"><h2 th:text="${thing.name}"></h2></a>
-                </li>
-            </ul>
+            <section class="th-categories">
+                    <a th:each="thing: ${categories}" th:href="'/categories/' + ${thing.id}">
+                        <img th:src="${thing.imgUrl}">
+                        <h4 th:text="${thing.name}"></h4>
+                    </a>
+            </section>
         </div>
     </section>
     <footer th:replace="fragments.html :: footer"></footer>

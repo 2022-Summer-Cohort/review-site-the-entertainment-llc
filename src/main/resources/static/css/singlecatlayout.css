@@ -1,9 +1,49 @@
+h3 {
+    color: goldenrod;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+}
 .pic-and-info {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    padding-bottom: 1.5rem;
+}
+.pic-and-info p {
+    box-sizing: content-box;
+    width: 500px;
+    height: auto;
+   margin-left: 1.5rem;
+   text-align: left;
+   /* background-color: goldenrod;
+   border-radius: 5px; */
+   color: goldenrod;
+   font-weight: bold;
 }
 .category-pic {
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+}
+/* MAIN */
+.main {
+display: grid;
+grid-template-columns: auto auto;
+grid-template-rows: auto auto auto auto auto;
+justify-items: center;
+text-align: center;
+row-gap: 5rem;
+padding-top: 1rem;
+padding-bottom: .5rem;
+}
+.main img {
+    height: 150px;
+    width: 150px;
 }

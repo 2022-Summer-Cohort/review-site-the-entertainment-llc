@@ -14,14 +14,16 @@ public class Category {
     private long id;
     private String name;
     private String imgUrl;
+    private String categoryDescription;
 
     @OneToMany(mappedBy = "category")
     private Collection<Destination> destinations;
 
-    public Category(String name,String imgUrl) {
+    public Category(String name,String imgUrl,String categoryDescription) {
 
         this.name = name;
         this.imgUrl = imgUrl;
+        this.categoryDescription = categoryDescription;
     }
 
     public Category(){
@@ -37,6 +39,10 @@ public class Category {
 
     public String getImgUrl() {
         return imgUrl;
+    }
+
+    public String getCategoryDescription() {
+        return categoryDescription;
     }
 
     public Collection<Destination> getDestinations() {

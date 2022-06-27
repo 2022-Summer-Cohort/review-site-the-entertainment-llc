@@ -16,7 +16,7 @@
     <div class="main">
         <ul>
             <li th:each="thing: ${hashtag}">
-                <p th:text="${thing.hashtagDescription}" th:href="'/hashtag/' + ${thing.id}">asdf</p>
+                <a th:text="${thing.hashtagDescription}" th:href="'/hashtags/' + ${thing.id}">asdf</a>
             </li>
         </ul>
     </div>

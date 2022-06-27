@@ -15,7 +15,7 @@ body {
 
 /* HEADER */
 header {
-    background-color: whitesmoke;
+    background-color: white;
 }
 /* SITE LOGO */
 .logo {
@@ -104,5 +104,9 @@ footer p {
 }
 .categories a:hover {
    color: white;
+}
+.th-categories img {
+    height: 150px;
+    width: 150px;
 }
 

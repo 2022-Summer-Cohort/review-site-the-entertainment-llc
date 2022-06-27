@@ -1,0 +1,26 @@
+/* MAIN */
+.main h1 {
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    color: goldenrod;
+}
+.main {
+    padding-bottom: 2rem;
+}
+.main li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+.main li {
+    padding-bottom: 1rem;
+}
+.main img {
+    height: 150px;
+    width: 150px;
+}

@@ -6,27 +6,37 @@
     margin: 0;
     padding: 0;
 }
+
 .main {
     padding: 1.5rem;
     background-color: goldenrod
 }
+
 .main h3 {
     color: rgb(3, 46, 82);
     text-align: center;
+    font-weight: bold;
     font-size: 2rem;
     margin: 0;
     padding: 0;
     padding-bottom: 1rem;
 }
+
 .those {
-
+    color: rgb(228, 106, 7);
+    font-style: italic;
 }
+
 .quote {
-
+    font-style: italic;
+    color: rgb(211, 43, 226);
 }
+
 .fun {
-
+    color: rgb(44, 236, 18);
+    font-weight: bold;
 }
+
 /* TEAM */
 .team article {
     display: flex;
@@ -35,47 +45,56 @@
     color: goldenrod;
     font-size: 1.5rem;
 }
+
 .team article:last-child {
     padding-bottom: 3rem;
 }
+
 .team .a {
-   display: grid;
-   direction: ltr;
-   grid-template-columns: auto auto auto;
-   justify-content: left;
-   
+    display: grid;
+    direction: ltr;
+    grid-template-columns: auto auto auto;
+    justify-content: left;
+
 }
+
 .team .a img {
     height: 150px;
     width: 150px;
- }
- .team .a h4 {
+}
+
+.team .a h4 {
     text-align: center;
     transform: rotate(-.25turn);
     font-size: 2rem;
     color: goldenrod;
 }
+
 .team .b {
     display: grid;
     direction: rtl;
     grid-template-columns: auto auto auto;
     justify-content: right;
 }
+
 .team .b img {
     height: 150px;
     width: 150px;
 }
+
 .team .b h4 {
     text-align: center;
     transform: rotate(.25turn);
     font-size: 2rem;
     color: goldenrod;
 }
+
 .hash {
     font-weight: bold;
     font-size: 2rem;
     color: white;
 }
+
 .rating {
     font-weight: bold;
     font-size: 1.5rem;

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,33 +11,22 @@
 </head>
 
 <body>
-<div th:replace="fragments.html :: header"></div>
+    <div th:replace="fragments.html :: header"></div>
+    <!-- <h3 th:text="${category.name}"></h3> -->
     <div class="pic-and-info">
-        <img src="/src/main/resources/static/images/large/ZoombeziBayLG.jpg" alt="" class="category-pic">
-        <p>info about the category</p>
+        <img th:src="${category.imgUrl}" class="category-pic">
+        <p th:text="${category.categoryDescription}"></p>
     </div>
+    <hr>
     <div class="main">
-<!--        <nav>-->
-<!--            <section><a href="destination.html"><img-->
-<!--                        src="/src/main/resources/static/images/pexels-stephen-niemeier-63703.jpg"></a></section>-->
-<!--            <section><a href="destination.html"><img-->
-<!--                        src="/src/main/resources/static/images/pexels-stephen-niemeier-63703.jpg"></a></section>-->
-<!--            <section><a href="destination.html"><img-->
-<!--                        src="/src/main/resources/static/images/pexels-stephen-niemeier-63703.jpg"></a></section>-->
-<!--            <section><a href="destination.html"><img-->
-<!--                        src="/src/main/resources/static/images/pexels-stephen-niemeier-63703.jpg"></a></section>-->
-
-
-<!--        </nav>-->
-
-        <ul>
-            <li th:each="destination: ${category.destinations}">
-                <a th:href="'/destination/' + ${destination.id}"><img th:src="${destination.imgUrl}"><h2 th:text="${destination.title}"></h2></a>
-            </li>
-        </ul>
+        <section th:each="destination: ${category.destinations}">
+            <a th:href="'/destination/' + ${destination.id}">
+                <img th:src="${destination.imgUrl}">
+                <h2 th:text="${destination.title}"></h2>
+            </a>
+        </section>
     </div>
-
-<div th:replace="fragments.html :: footer"></div>
+    <div th:replace="fragments.html :: footer"></div>
 </body>
 
 </html>

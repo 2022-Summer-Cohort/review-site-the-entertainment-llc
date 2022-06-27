@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,61 +11,55 @@
 </head>
 
 <body>
-<div th:replace="fragments.html :: header"></div>
+    <div th:replace="fragments.html :: header"></div>
 
     <div class="main">
-<!--        <section class="description">-->
-<!--            <section class="title">-->
-<!--                <p>title of the destination</p>-->
-<!--            </section>-->
-<!--            <section class="address">-->
-<!--                <p>address of the destination</p>-->
-<!--            </section>-->
-<!--            <section class="contact">-->
-<!--                <p>123-123-1234</p>-->
-<!--            </section>-->
-<!--            <section class="ticket">-->
-<!--                <p>cost of ticket</p>-->
-<!--            </section>-->
-<!--        </section>-->
-<!--        <section class=rating>-->
-<!--            <p>average rating</p>-->
-<!--        </section>-->
-<!--        <section class="reviews">-->
-<!--            <p>this is where the reviews will be</p>-->
-<!--            <p>this is where the rating is</p>-->
-<!--        </section>-->
-
         <section class="description">
             <section class="title">
-                <p th:text="${destination.title}">asdf</p>
+                <h2 th:text="${destination.title}"></h2>
+                <div class="sideview">
+                    <img th:src="${destination.imgUrl}">
+                    <div class="address-website">
+                    <section class="address">
+                        <h4>Destination Address</h4>
+                        <p th:text="${destination.address}"></p>
+                    </section>
+                    <section class="website">
+                        <h4>Destination Website</h4>
+                        <a th:text="${destination.destinationUrl}" th:href="${destination.destinationUrl}"></a>
+                    </section>
+                    </div>
+                </div>
             </section>
-            <section class="address">
-                <p th:text="${destination.address}">asdf</p>
+            <section class="ticket">
+                <h4>Ticket Price/SeasonPass</h4>
+                <p th:text="${destination.ticketPriceSeasonPrice}"></p>
+                <h6>*Ticket prices are based on a basic single weekday adult admission ticket bought in-person (excludes
+                    online, group and other discounts as well as no perks, add-ons, or applicable taxes).</h6>
             </section>
         </section>
+        <hr>
         <section class="rating">
-            <section class="rating">
-                <p th:text="${destination.rating}">asdf</p>
-            </section>
+            <h4>Rating</h4>
+            <div class="p-group">
+                <p th:text="${destination.rating}"></p>
+                <p class="constant">/5</p>
+            </div>
         </section>
         <section class="reviews">
-            <p th:text="${destination.review}">asdf</p>
+            <h4>Reviews</h4>
+            <p th:text="${destination.review}"></p>
         </section>
-        <section class = "hashtag">
+        <section class="hashtag">
+            <h4>#Hashtags</h4>
             <ul>
                 <li th:each="thing: ${destination.hashtags}">
                     <a th:text="${thing.hashtagDescription}" th:href="'/hashtags/' + ${thing.id}">asdf</a>
                 </li>
             </ul>
         </section>
-
-
-
-
     </div>
-
-<div th:replace="fragments.html :: footer"></div>
+    <div th:replace="fragments.html :: footer"></div>
 </body>
 
 </html>
