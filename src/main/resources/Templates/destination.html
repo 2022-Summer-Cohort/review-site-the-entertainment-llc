@@ -58,6 +58,11 @@
                 </li>
             </ul>
         </section>
+        <form th:action="'/destination/' + ${destination.id} + '/addhashtag'" method="post">
+            <label for="hashtagdestinationID"></label>
+            <input type="text" name="hashtag" id="hashtagdestinationID">
+            <input type="submit">
+        </form>
     </div>
     <div th:replace="fragments.html :: footer"></div>
 </body>
