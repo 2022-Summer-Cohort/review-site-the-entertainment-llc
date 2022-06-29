@@ -48,7 +48,18 @@
         </section>
         <section class="reviews">
             <h4>Reviews</h4>
-            <p th:text="${destination.review}"></p>
+            <ul>
+                <li th:each="thing: ${destination.reviews}">
+                    <p th:text="${thing.review}">asdf</p>
+                </li>
+            </ul>
+
+            <form th:action="'/destination/' + ${destination.id} + '/addReview'" method="post">
+                <input type="text" placeholder="Add review here..." name="review" id="review">
+                <button type="submit" class="button">Submit Review</button>
+
+            </form>
+
         </section>
         <section class="hashtag">
             <h4>#Hashtags</h4>

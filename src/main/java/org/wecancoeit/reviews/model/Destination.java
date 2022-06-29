@@ -12,7 +12,10 @@ public class Destination {
     private long id;
     private String title;
     private String address;
-    private String review;
+
+    @OneToMany(mappedBy = "destination")
+    private Collection<Review> reviews;
+
     private double rating;
     private String imgUrl;
     private String ticketPriceSeasonPrice;
@@ -24,10 +27,9 @@ public class Destination {
     @ManyToMany
     private Collection<Hashtag> hashtags;
 
-    public Destination(String title, String address, String review, double rating, Category category, String imgUrl, String ticketPriceSeasonPrice, String destinationUrl, Hashtag...hashtags) {
+    public Destination(String title, String address, double rating, Category category, String imgUrl, String ticketPriceSeasonPrice, String destinationUrl, Hashtag...hashtags) {
         this.title = title;
         this.address = address;
-        this.review = review;
         this.rating = rating;
         this.category = category;
         this.hashtags = Arrays.asList(hashtags);
@@ -52,8 +54,8 @@ public class Destination {
         return address;
     }
 
-    public String getReview() {
-        return review;
+    public Collection<Review> getReviews() {
+        return reviews;
     }
 
     public double getRating() {
@@ -82,5 +84,8 @@ public class Destination {
 
     public void addHashtag(Hashtag hashtag){
         hashtags.add(hashtag);
+    }
+    public void addReview(Review review){
+        reviews.add(review);
     }
 }
