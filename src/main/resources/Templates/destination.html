@@ -50,16 +50,17 @@
             <h4>Reviews</h4>
             <ul>
                 <li th:each="thing: ${destination.reviews}">
-                    <p th:text="${thing.review}">asdf</p>
+                    <p th:text="${thing.review}"></p>
                 </li>
             </ul>
-
             <form th:action="'/destination/' + ${destination.id} + '/addReview'" method="post">
-                <input type="text" placeholder="Add review here..." name="review" id="review">
-                <button type="submit" class="button">Submit Review</button>
-
+                <div class="input-group">
+                    <input type="text" placeholder="Add review here..." name="review" id="review">
+                    <div class="input-group">
+                        <button type="submit" class="button">Submit Review</button>
+                    </div>
+                </div>
             </form>
-
         </section>
         <section class="hashtag">
             <h4>#Hashtags</h4>
@@ -79,7 +80,6 @@
                 </div>
             </form>
         </section>
-
     </div>
     <div th:replace="fragments.html :: footer"></div>
 </body>
