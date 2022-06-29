@@ -20,14 +20,14 @@
                 <div class="sideview">
                     <img th:src="${destination.imgUrl}">
                     <div class="address-website">
-                    <section class="address">
-                        <h4>Destination Address</h4>
-                        <p th:text="${destination.address}"></p>
-                    </section>
-                    <section class="website">
-                        <h4>Destination Website</h4>
-                        <a th:text="${destination.destinationUrl}" th:href="${destination.destinationUrl}"></a>
-                    </section>
+                        <section class="address">
+                            <h4>Destination Address</h4>
+                            <p th:text="${destination.address}"></p>
+                        </section>
+                        <section class="website">
+                            <h4>Destination Website</h4>
+                            <a th:text="${destination.destinationUrl}" th:href="${destination.destinationUrl}"></a>
+                        </section>
                     </div>
                 </div>
             </section>
@@ -58,11 +58,17 @@
                 </li>
             </ul>
         </section>
-        <form th:action="'/destination/' + ${destination.id} + '/addhashtag'" method="post">
-            <label for="hashtagdestinationID"></label>
-            <input type="text" name="hashtag" id="hashtagdestinationID">
-            <input type="submit">
-        </form>
+        <section class="add-hashtag-form">
+            <form th:action="'/destination/' + ${destination.id} + '/addhashtag'" method="post">
+                <div class="input-group">
+                    <input type="text" placeholder="Add # here..." name="hashtag" id="hashtagdestinationID">
+                    <div class="input-group">
+                        <button type="submit" class="button">Submit #</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
     </div>
     <div th:replace="fragments.html :: footer"></div>
 </body>
